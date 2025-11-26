@@ -55,8 +55,6 @@ developer_addresses.json
 
 # GPU Source Code (proprietary - keep compiled binaries only)
 # Exclude proprietary source files
-gpu_core/engine.py
-gpu_core/kernels.py
 gpu_core/.cuda_cache/
 *.build/
 *.pyi
