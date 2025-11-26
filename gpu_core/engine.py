@@ -17,7 +17,8 @@ KERNEL_CACHE_DIR = Path(__file__).parent / ".cuda_cache"
 KERNEL_CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 class GPUEngine(mp.Process):
-    def __init__(self, request_queue, response_queue):
+    def __init__(self, request_queue, response_queue, device_id):
+        # Ignoring `device_id` to conform to the upstream interface.
         super().__init__()
         self.request_queue = request_queue
         self.response_queue = response_queue
